@@ -151,7 +151,7 @@ class wNMF:
         requires: X,W,n_run
         returns: self - the wNMF object with access to all the return variables listed above
     
-    fit_transfrom(X,W,n_run,...):
+    fit_transform(X,W,n_run,...):
         description: Fits an NMF model for the data X, weight matrix W, and returns the coefficient matrix V.
         requires: X,W,n_run
         returns: self.coefficents_  - specifically the best version of V (lowest self.err) identified in n_run's
@@ -442,7 +442,7 @@ class wNMF:
         return self
        
     
-    def fit_transfrom(self,X,W,n_run=1):
+    def fit_transform(self,X,W,n_run=1):
         '''
         Implements the fit_transform functionality from the SKlearn model API. Fits an NMF model to the
         data matrix X, and weight matrix W. Determines the best solution U,V over n_run's. The data-matrix
